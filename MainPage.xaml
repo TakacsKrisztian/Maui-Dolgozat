@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolgozat.MainPage"
+             Title="Kezdőlap" >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Bejelentkezés"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="kando.jpg"
+                SemanticProperties.Description="Miskolci SZC Kandó Kálmán Informatikai Technikum"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+
+            <Entry
+                Placeholder="Felhasználó név"
+                x:Name="UserName"
+                Keyboard="Text"
+                HorizontalOptions="Center"/>
+
+            <Entry
+                Placeholder="Jelszó"
+                x:Name="Password"
+                IsPassword="True"
+                HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="LoginBtn"
+                Text="Regisztáció/Bejelentkezés"
+                SemanticProperties.Hint="Bejelentkezik az alkalmazásba?"
+                Clicked="OnLoginBtnClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
